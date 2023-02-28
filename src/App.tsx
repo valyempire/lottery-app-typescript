@@ -1,26 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Lottery } from './componets/Lottery';
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Lottery title="Lottery 6 from 49" maxNum={49} numBalls={6} />
+      <Lottery title="Mini Daily" maxNum={10} numBalls={4} />
     </div>
   );
-}
-
-export default App;
+};
